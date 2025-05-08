@@ -13,6 +13,7 @@ pub struct Fuzz {
     pub allow_duplicate_txs: Option<bool>,
     pub programs: Option<Vec<_FuzzProgram>>,
     pub accounts: Option<Vec<_FuzzAccount>>,
+    suppress_program_crashes: Option<bool>,
 }
 
 impl Fuzz {
@@ -21,6 +22,9 @@ impl Fuzz {
     }
     pub fn get_allow_duplicate_txs(&self) -> bool {
         self.allow_duplicate_txs.unwrap_or(false)
+    }
+    pub fn get_suppress_program_crashes(&self) -> bool {
+        self.suppress_program_crashes.unwrap_or(false)
     }
 }
 

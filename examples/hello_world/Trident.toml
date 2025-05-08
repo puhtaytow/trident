@@ -2,6 +2,7 @@
 
 [fuzz]
 fuzzing_with_stats = true
+suppress_program_crashes = true
 
 [honggfuzz]
 iterations = 10000

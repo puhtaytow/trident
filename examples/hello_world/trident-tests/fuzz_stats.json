@@ -1,0 +1,9 @@
+{
+  "signal_info": "SIGINT (Ctrl+C)",
+  "statistics": {
+    "total_executions": 0,
+    "total_failed_executions": 0,
+    "total_successful_executions": 0,
+    "transactions": {}
+  }
+}

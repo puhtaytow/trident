@@ -60,7 +60,9 @@ impl FuzzClient for TridentSVM {
             .with_syscalls_v1()
             .with_syscalls_v2()
             .with_sbf_programs(program_binaries)
-            .with_permanent_accounts(permanent_accounts);
+            .with_permanent_accounts(permanent_accounts)
+            .with_suppress_program_crashes(config.get_suppress_program_crashes());
+
         if cfg!(afl) && config.get_fuzzing_with_stats() {
             let metrics_path = std::env::current_dir()
                 .expect("Failed to get current directory")

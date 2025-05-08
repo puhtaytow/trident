@@ -48,11 +48,11 @@ path = "../config"
 version = "0.10.0"
 
 
-# Trident-SVM
+# Trident-SVM // TODO: fix this dependency
 [dependencies.trident-svm]
-version = "0.0.3"
-git = "https://github.com/Ackee-Blockchain/trident-svm"
-branch = "master"
+# version = "0.0.3"
+path = "/home/redrum/Projects/puhtaytow/trident-svm"
+# branch = "feat/supress-program-crashes"
 
 [dependencies]
 
