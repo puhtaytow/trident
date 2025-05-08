@@ -7,16 +7,16 @@ pub mod hello_world {
     use super::*;
 
     pub fn initialize_fn(ctx: Context<InitializeContext>, input: u8) -> Result<()> {
-        msg!(
-            "Hello World address: {}",
-            ctx.accounts.hello_world_account.key()
-        );
-        let hello_world_store = &mut ctx.accounts.hello_world_account;
-        hello_world_store.input = input;
-
-        if input > 200 && input < 210 {
-            panic!("This number is magic")
+        if input % 2 == 1 {
+            panic!("Input must be even");
         }
+
+        // let hello_world_store = &mut ctx.accounts.hello_world_account;
+        // hello_world_store.input = input;
+
+        // if input > 200 && input < 210 {
+        //     panic!("This number is magic")
+        // }
 
         Ok(())
     }
