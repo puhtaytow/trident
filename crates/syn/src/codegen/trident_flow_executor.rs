@@ -100,11 +100,14 @@ impl ToTokens for TridentFlowExecutorImpl {
                         }
 
 
-                        fuzz_afl(true, |fuzzer_data| {
+                        // true to show crashes, false to supress these
+                        let show_crashes = std::env::var("SHOW_CRASHES").map(|_| true).unwrap_or(false);
+
+                        fuzz_afl(show_crashes, |fuzzer_data| {
                             let mut buf = Unstructured::new(fuzzer_data);
                             let _ = self.execute_flows(&mut buf);
                             self.client._clear_accounts();
-                            });
+                        });
                     } else if cfg!(honggfuzz_debug) {
                         let mut crash_file = String::new();
                         std::io::stdin()
