@@ -1,0 +1,16 @@
+{
+  "signal_info": "SIGINT (Ctrl+C)",
+  "statistics": {
+    "total_executions": 2,
+    "total_failed_executions": 0,
+    "total_successful_executions": 2,
+    "transactions": {
+      "InitializeFnTransaction": {
+        "errors": [],
+        "failed_executions": 0,
+        "successful_executions": 2,
+        "total_executions": 2
+      }
+    }
+  }
+}
